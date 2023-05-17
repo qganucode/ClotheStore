@@ -6,8 +6,7 @@ import './Login.scss';
 import { storeUser } from '../../helper';
 import { useDispatch } from 'react-redux';
 import { updateUserData } from '../../redux/userProfileReducer';
-import { setUserId } from '../../redux/cartReducer';
-
+import { setCartUserId } from '../../redux/cartReducer';
 const initialUserData = {identifier: '', password: ''}
 
 const Login = () => {
@@ -26,11 +25,10 @@ const Login = () => {
         try {
             if(userData.identifier && userData.password) {
                 const {data} = await axios.post(url,userData)
-                console.log(data)
                 if(data.jwt) {
                     storeUser(data)
                     dispatch(updateUserData(data));
-                    dispatch(setUserId(data.user.id));
+                    dispatch(setCartUserId(data.user.id));
                     toast.success('logged in  successfully!',{
                         hideProgressBar: true,
                     })

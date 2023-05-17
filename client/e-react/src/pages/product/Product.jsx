@@ -11,8 +11,6 @@ import { addToFavourite } from '../../redux/favouriteReducer';
 
 const Product = () => {
     const id = useParams().id
-    const {userData} = useSelector(state => state.userProfile);
-    console.log(userData);
     const [quantity,setquantity] = useState(1)
     const {loading,data,error} = useFetch(`/products/${id}?populate=*`)
     const [selectedImg,setSelectedImg] = useState("img")

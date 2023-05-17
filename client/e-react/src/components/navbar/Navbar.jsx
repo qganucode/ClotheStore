@@ -41,7 +41,8 @@ const Navbar = () => {
             navigate('/login');
         }
     }
-    const products = useSelector(state => state.cart.products);
+    const carts = useSelector(state => state.cart);
+    const cartUser = carts[carts.userId] || undefined;
     const productsFavourite = useSelector(state => state.favourite.products)
     return (
         <div className="navbar">
@@ -92,7 +93,7 @@ const Navbar = () => {
                         </div>
                         <div className="cartIcon" onClick={handleClickCart}>
                             <ShoppingCartCheckoutIcon/>
-                            <span>{products.length}</span>
+                            <span>{cartUser?.items?.length || 0}</span>
                         </div>
                     </div>
                 </div>
