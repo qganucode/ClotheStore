@@ -1,13 +1,13 @@
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../redux/cartReducer';
+import { addToFavourite } from '../../redux/favouriteReducer';
+import useFetch from '../../hooks/useFetch';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BalanceIcon from '@mui/icons-material/Balance';
 import './product.scss';
-import useFetch from '../../hooks/useFetch';
-import { useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../../redux/cartReducer';
-import { addToFavourite } from '../../redux/favouriteReducer';
 
 const Product = () => {
     const id = useParams().id
