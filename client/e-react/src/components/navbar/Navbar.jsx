@@ -102,7 +102,7 @@ const Navbar = () => {
           </div>
           <div className='icons'>
             <SearchIcon />
-            <Link className='link' to='/profile'>
+            <Link className='link' to='/profile/accountsettings'>
               <PersonOutlineIcon />
             </Link>
             <div className='favouriteIcon' onClick={handleClickFavourite}>

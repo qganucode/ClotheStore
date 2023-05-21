@@ -37,7 +37,7 @@ const router = createBrowserRouter([{
                 element: <Product />
             },
             {
-                path: '/profile',
+                path: '/profile/:activepage',
                 element: <Protector Component={Profile} />
             },
             {
