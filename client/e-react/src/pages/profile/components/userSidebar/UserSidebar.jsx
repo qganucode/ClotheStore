@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import LocalMallIcon from '@mui/icons-material/LocalMall';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocalMallIcon from "@mui/icons-material/LocalMall";
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import "./userSidebar.scss";
 
 const UserSidebar = ({ activepage }) => {
@@ -38,6 +39,14 @@ const UserSidebar = ({ activepage }) => {
       >
         <LocationOnIcon />
         <span>Address</span>
+      </Link>
+
+      <Link
+        to='/profile/legal'
+        className={activepage === "legal" ? "item active" : "item"}
+      >
+        <AssignmentTurnedInIcon />
+        <span>Legal Notice</span>
       </Link>
     </div>
   );

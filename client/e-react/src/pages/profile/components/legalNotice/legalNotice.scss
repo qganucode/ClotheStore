@@ -1,0 +1,22 @@
+.legalNotice {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  .heading {
+    padding: 10px 20px;
+    color: #2879fe;
+  }
+  .legalNoticein {
+    margin: 20px;
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}

@@ -5,8 +5,9 @@ import UserSidebar from "./components/userSidebar/UserSidebar";
 import AccountSetting from "./components/accountSettings/AccountSettings";
 import YourOrder from "./components/yourOrder/YourOrder";
 import ChangePassword from "./components/changePassword/ChangePassword";
-import './profile.scss';
 import UserAddress from "./components/address/UserAddress";
+import LegalNotice from "./components/legalNotice/LegalNotice";
+import "./profile.scss";
 
 const Profile = () => {
   const { activepage } = useParams();
@@ -24,6 +25,7 @@ const Profile = () => {
           {activepage === "yourorder" && <YourOrder />}
           {activepage === "changepassword" && <ChangePassword />}
           {activepage === "address" && <UserAddress />}
+          {activepage === "legal" && <LegalNotice />}
         </div>
       </div>
     </div>
