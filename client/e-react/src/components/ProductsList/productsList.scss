@@ -1,5 +1,46 @@
 .productList {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  grid-row-gap: 40px;
+  .link-card {
+    width: 24%;
+  }
+}
+
+.pagination {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-top: 50px;
+  font-size: 20px;
+  li {
+    cursor: pointer;
+    border-radius: 5px;
+    a {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  li:hover {
+    background-color: #8ab1f1;
+    color: #fff;
+  }
+  .active {
+    background-color: #2879fe;
+    color: #fff;
+  }
+  .active:hover {
+    cursor: default;
+    background-color: #2879fe;
+    color: #fff;
+  }
+  .disabled {
+    display: none;
+  }
 }

@@ -16,5 +16,10 @@
     }
     .bottom {
         margin-bottom: 50px;
+        .link-card {
+            .card {
+                width: 95%;
+            }
+        }
     }
 }
