@@ -3,7 +3,6 @@ import "./accountSetting.scss";
 
 const AccountSetting = () => {
   const data = useSelector((state) => state.userProfile);
-  console.log('dataUser: ',data.userData.user.username)
   return (
     <div className='accountSetting'>
       <h1 className='heading'>Persional Information</h1>
@@ -18,7 +17,7 @@ const AccountSetting = () => {
           <label htmlFor='mobile'>
             Phone/mobile <span>*</span>
           </label>
-          <input type='text' name='mobile' id='mobile' />
+          <input type='text' name='mobile' id='mobile'/>
         </div>
         <div className='form-group'>
           <label htmlFor='email'>

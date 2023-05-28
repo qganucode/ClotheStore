@@ -23,6 +23,7 @@ const Cart = () => {
       const stripe = await stripePromise;
       const res = await makeRequest.post("/orders", {
         products: cartUser.items,
+        userId: carts.userId
       });
       await stripe.redirectToCheckout({
         sessionId: res.data.stripeSession.id,

@@ -12,7 +12,6 @@ import "./profile.scss";
 const Profile = () => {
   const { activepage } = useParams();
 
-  const data = useSelector((state) => state.userProfile);
   return (
     <div className='profile'>
       <SingleBanner img='/images/banner.jpg' title={activepage} />

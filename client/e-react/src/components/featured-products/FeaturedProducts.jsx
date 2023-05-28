@@ -39,6 +39,7 @@ import "react-multi-carousel/lib/styles.css";
 // ]
 const FeaturedProducts = ({type}) => {
     const { loading, data, error } = useFetch(`/products?populate=*&filters[type][$eq]=${type}`)
+    console.log(data)
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.

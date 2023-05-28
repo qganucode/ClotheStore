@@ -12,6 +12,7 @@ const Products = () => {
   const { loading, data, error } = useFetch(
     `/sub-categories?[filters][categories][id][$eq]=${catId}`
   );
+  const {data: data2} = useFetch(`/categories/${catId}?populate=*`);
   const handleChange = (e) => {
     const value = e.target.value;
     const isSelected = e.target.checked;
@@ -77,7 +78,7 @@ const Products = () => {
       <div className='right'>
         <img
           className='catImg'
-          src='https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600'
+          src={process.env.REACT_APP_UPLOAD_URL + data2?.attributes?.img?.data?.attributes?.url}
           alt='catImg'
         />
         <ProductList

@@ -17,6 +17,11 @@
     },
     "products": {
       "type": "json"
+    },
+    "userId": {
+      "type": "integer",
+      "unique": false,
+      "required": true
     }
   }
 }

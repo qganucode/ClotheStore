@@ -65,7 +65,7 @@ const Navbar = () => {
           </div>
           <div className='item'>
             <Link className='link' to='/products/1'>
-              Man
+              Men
             </Link>
           </div>
           <div className='item'>
